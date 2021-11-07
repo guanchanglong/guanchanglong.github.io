@@ -152,16 +152,30 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-idea2019.3的破解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Nginx学习1：Nginx基本概念" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="IDEA-2019-3-1"><a href="#IDEA-2019-3-1" class="headerlink" title="IDEA 2019.3.1"></a>IDEA 2019.3.1</h1><p> 因为我下载的是不是社区版，所以需要激活码激活，要不然只能用30天，所以…<br> 以下方法在最新2019.3上测试通过。<br> 如果资金允许，点击<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/buy/">https://www.jetbrains.com/idea/buy/</a> 购买正版！<br>学生凭学生证可免费申请 <a target="_blank" rel="noopener" href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F">https://sales.jetbrains.com/hc/zh-cn/articles/207154369%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F</a></p>
-<p>激活操作步骤如下：<br>先在网上搜索下载jetbrains-agent.jar这个文件，把它放到你认为合适的文件夹内。例如：idea安装目录的bin目录：D:\Program Files\JetBrains\IntelliJ IDEA 2019.3\bin<br>启动你的IDE，选择：试用（Evaluate for free）进入IDE</p>
-<p>点击IDEA菜单：Help 选择Edit Custom VM Options …<br><img src="https://img-blog.csdnimg.cn/20200116170310641.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc4NDY2Ng==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在打开的vmoptions编辑窗口的最后一行添加：-javaagent:D:\Program Files\JetBrains\jetbrains-agent.jar<br>一定要自己确认好路径(不要使用中文路径)，填错会导致IDE打不开！！！最好使用绝对路径。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200116170545701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc4NDY2Ng==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后重启你的IDEA。</p>
-<p>重启完后点击IDE菜单 Help 选择Register…<br>支持两种注册方式：License server 和 Activation code:<br>选择License server方式，地址填入：<a target="_blank" rel="noopener" href="http://jetbrains-license-server/">http://jetbrains-license-server</a> （应该会自动填上），或者点击按钮：Discover Server来自动填充地址，然后点击Activate来完成激活。<br>或者点击按钮：Discover Server来自动填充地址。<br>选择Activation code方式离线激活，使用：ACTIVATION_CODE.txt 里面的注册码激活<br><img src="https://img-blog.csdnimg.cn/20200116171805596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc4NDY2Ng==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>注：当IDEA打不开时可以在安装IDEA的文件夹下找到idea.bat文件</strong><br><img src="https://img-blog.csdnimg.cn/20200116170903266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc4NDY2Ng==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在idea.bat文件最后一行添加上pause来查看发生的IDEA打不开的原因<br><img src="https://img-blog.csdnimg.cn/20200116171210499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc4NDY2Ng==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一般都是系统缺失某个文件导致IDEA无法正常打开</p>
+        <h1 id="Nginx的基本概念"><a href="#Nginx的基本概念" class="headerlink" title="Nginx的基本概念"></a>Nginx的基本概念</h1><h2 id="什么是Nginx"><a href="#什么是Nginx" class="headerlink" title="什么是Nginx"></a>什么是Nginx</h2><p>Nginx (“engine x”) 是一个高性能的 HTTP 和反向代理服务器,特点是占有内存少，并发能力强，事实上 nginx 的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用 nginx 网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>
+<h2 id="正向代理和反向代理"><a href="#正向代理和反向代理" class="headerlink" title="正向代理和反向代理"></a>正向代理和反向代理</h2><h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>正向代理：如果把局域网外的 Internet 想象成一个巨大的资源库，则局域网中的客户端要访问 Internet，则需要通过代理服务器来访问，这种代理服务就称为正向代理。</p>
+<p><strong>需要在客户端配置代理服务器进行指定网站访问。</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/f9f38364b55c403aae9fad62fca98112.png" alt="在这里插入图片描述"></p>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理，其实客户端对代理是无感知的，因为客户端不需要任何配置就可以访问，我们只需要将请求发送到反向代理服务器，由反向代理服务器去选择目标服务器获取数据后，在返回给客户端，此时反向代理服务器和目标服务器对外就是一个服务器，<strong>暴露的是代理服务器地址，隐藏了真实服务器 IP 地址。</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/b00076c065c343709981d518438383b5.png" alt="在这里插入图片描述"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>借用一下网上的图：<br><img src="https://img-blog.csdnimg.cn/796e0b36597f45fdb8df3bd1b007694e.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/46034d98261d4572968f12741105df7e.png" alt="在这里插入图片描述"></p>
+<p><strong>正向代理即是客户端代理，代理客户端，服务端不知道实际发起请求的客户端</strong></p>
+<p><strong>反向代理即是服务端代理，代理服务端，客户端不知道实际提供服务的服务端</strong></p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>增加服务器的数量，然后将请求分发到各个服务器上，将原先请求集中到单个服务器上的情况改为将请求分发到多个服务器上，将负载分发到不同的服务器，也就是我们所说的负载均衡。</p>
+<p>负载均衡服务器如何选择要转发的后端服务器？<br>负载均衡算法决定了后端的哪些可用的服务器会被选中。<br>几个常用的算法：</p>
+<ul>
+<li>Round Robin（轮询）：为第一个请求选择列表中的第一个服务器，然后按顺序向下移动列表直到结尾，然后循环。</li>
+<li>Least Connections（最小连接）：优先选择连接数最少的服务器，在普遍会话较长的情况下推荐使用。</li>
+<li>Source：根据请求源的 IP 的散列（hash）来选择要转发的服务器。这种方式可以一定程度上保证特定用户能连接到相同的服务器。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/acfa385af1524e8c8fdf6f3b6d5d7c0f.gif" alt="请添加图片描述"><br>上图用到的技术：浮动IP、心跳检测、</p>
+<h2 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h2><p>为了加快网站的解析速度，可以把动态页面和静态页面由不同的服务器来解析，加快解析速度。降低原来单个服务器的压力。<br><img src="https://img-blog.csdnimg.cn/3a68e934bac14bfd8b05273cdcd76b1f.png" alt="在这里插入图片描述"></p>
+<p>PS：也可以到我的个人博客查看更多内容<br>个人博客地址：<a target="_blank" rel="noopener" href="http://www.xiaoguantongxue.com/">小关同学的博客</a></p>
 
       
 
@@ -174,7 +188,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/24/idea2019.3%E7%9A%84%E7%A0%B4%E8%A7%A3/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/11/07/Nginx%E5%AD%A6%E4%B9%A01%EF%BC%9ANginx%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">展开全文 >></a>
         </p>
       
 
@@ -206,7 +220,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -218,7 +232,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 小关
+    		&copy; 2021 小关
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
